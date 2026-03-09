@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import ProfileForm from '../components/ProfileForm';
 import OpportunityCard from '../components/OpportunityCard';
+import { API_URL } from '../config';
 import './OpportunityList.css';
 
 type EligibilityStatus = 'eligible' | 'possibly_eligible' | 'not_eligible';
@@ -51,7 +52,7 @@ const OpportunityList = () => {
     setError(null);
 
     try {
-      const response = await fetch('http://localhost:3000/api/opportunities/match', {
+      const response = await fetch(`${API_URL}/api/opportunities/match`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

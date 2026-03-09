@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import OpportunityCard from './OpportunityCard';
+import { API_URL } from '../config';
 import './Chatbot.css';
 
 interface Message {
@@ -45,7 +46,7 @@ const Chatbot = ({ isOpen, onClose }: ChatbotProps) => {
     setIsTyping(true);
 
     try {
-      const response = await fetch('http://localhost:3000/api/chatbot/query', {
+      const response = await fetch(`${API_URL}/api/chatbot/query`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

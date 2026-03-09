@@ -36,7 +36,7 @@ Natural language interface for finding opportunities
 - Node.js (v18 or higher)
 - npm or yarn
 
-### Installation
+### Local Development
 
 1. **Clone the repository**
    ```bash
@@ -56,7 +56,13 @@ Natural language interface for finding opportunities
    npm install
    ```
 
-### Running the Application
+4. **Create environment file for frontend**
+   ```bash
+   cd frontend
+   cp .env.example .env
+   ```
+
+### Running Locally
 
 You need to run both backend and frontend servers:
 
@@ -75,6 +81,16 @@ npm run dev
 Frontend runs on http://localhost:5173
 
 **Open your browser** and navigate to http://localhost:5173
+
+### 🌐 Deploy to Production
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions.
+
+**Quick Deploy:**
+- Backend: Deploy to Render (free)
+- Frontend: Deploy to Vercel (free)
+- Total time: ~15 minutes
+- Cost: $0/month
 
 ## 📁 Project Structure
 
