@@ -1,4 +1,4 @@
-import { ChangeEvent } from 'react';
+import { type ChangeEvent } from 'react';
 
 interface HackathonsFormProps {
   formData: Record<string, any>;

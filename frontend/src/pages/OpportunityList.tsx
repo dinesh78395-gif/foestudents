@@ -78,37 +78,6 @@ const OpportunityList = () => {
     }
   };
 
-  const getMockOpportunities = (): Opportunity[] => {
-    return [
-      {
-        id: '1',
-        title: 'Sample Opportunity 1',
-        category: category || 'hackathons',
-        description: 'This is a sample opportunity. Connect to backend to see real data.',
-        eligibilityStatus: 'eligible',
-        eligibilityReason: 'You meet all required criteria',
-        benefits: 'Sample benefits listed here',
-        requiredDocuments: ['ID Proof', 'Address Proof'],
-        startDate: new Date().toISOString(),
-        deadline: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(),
-        officialLink: 'https://example.com',
-      },
-      {
-        id: '2',
-        title: 'Sample Opportunity 2',
-        category: category || 'hackathons',
-        description: 'Another sample opportunity. Backend integration needed for real data.',
-        eligibilityStatus: 'possibly_eligible',
-        eligibilityReason: 'You meet most criteria but some information is unclear',
-        benefits: 'Additional sample benefits',
-        requiredDocuments: ['Educational Certificate', 'Income Certificate'],
-        startDate: new Date().toISOString(),
-        deadline: new Date(Date.now() + 15 * 24 * 60 * 60 * 1000).toISOString(),
-        officialLink: 'https://example.com',
-      },
-    ];
-  };
-
   const handleBack = () => {
     navigate('/');
   };
